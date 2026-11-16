@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cycling Log — Support</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+         max-width: 760px; margin: 0 auto; padding: 32px 20px 64px; }
+  h1 { font-size: 28px; margin-bottom: 4px; }
+  h2 { font-size: 20px; margin-top: 32px; }
+  h3 { font-size: 17px; margin-top: 20px; }
+  .meta { color: #6b7280; font-size: 14px; }
+  table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 15px; }
+  th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid #d1d5db; }
+  code { font-size: 14px; }
+  hr { border: none; border-top: 1px solid #d1d5db; margin: 40px 0; }
+</style>
+</head>
+<body>
+
+<h1>Cycling Log — Support</h1>
+<p class="meta">Spendly Cycling Log · iOS 27 or later · <a href="index.html">Privacy policy</a></p>
+
+<h2>Recording a ride</h2>
+<ol>
+  <li>Open the app once with a clear view of the sky so GPS can lock (the dot turns green).</li>
+  <li>Tap the blue play button. The header shows live speed in km/h, distance and elapsed time.</li>
+  <li>“Pause” stops the clock and the route; “Stop” saves the ride.</li>
+  <li>Keep Precise Location on. iOS → Settings → Privacy &amp; Security → Location Services → Cycling Log.</li>
+</ol>
+
+<h2>Sampling and pauses</h2>
+<ul>
+  <li>Recording is adaptive: 1 sample per second at speed, 2 s while cruising or slowing down, and 5 s only once a stop has already been detected. A ride is never thinned while you are moving.</li>
+  <li>Stops of about 20 seconds or longer are detected automatically and removed from moving time. Shorter stops (a quick traffic light) still count.</li>
+  <li>Average speed always uses moving time, so waiting at lights does not lower it.</li>
+</ul>
+
+<h2>Dashboard</h2>
+<ul>
+  <li><strong>This week</strong> — distance, rides, moving time and average speed, compared with the previous week. A week with no previous rides is labelled as a baseline instead of showing a meaningless delta.</li>
+  <li><strong>Wear</strong> — chain, rear tyre and brake pads. Default intervals: chain 3000 km / 200 h, tyre 3500 km, pads 1500 km. Orange at 80%, red at 100%. Only rides recorded in the app count; imported GPX files do not.</li>
+  <li><strong>Training trend</strong> — this month's daily distance with this month's average-speed line against last month's.</li>
+  <li><strong>Recovery</strong> — a band (ready / normal / fatigued / overreached) with today's suggestion and the reasons behind it, based on the 150-minute weekly baseline, acute:chronic load, consecutive days, weekly increase and single-ride spikes.</li>
+</ul>
+
+<h2>Sharing with a local AI</h2>
+<p>Ride detail and the month list have “Share for AI”: it can jump straight into Pocket LLM or Pocket LLMG with the summary already in the question field, copy the text, or use any other app. The payload is a readable summary followed by a JSON block (schema <code>spendlycyclinglog.ride_report/v1</code>, <code>…week_report/v1</code>, <code>…month_report/v1</code>) and contains <strong>no coordinates</strong>.</p>
+
+<h2>Membership</h2>
+<table>
+  <tr><th>Item</th><th>Detail</th></tr>
+  <tr><td>Type</td><td>One-time, non-consumable purchase (no subscription, nothing renews)</td></tr>
+  <tr><td>Price</td><td>US$4.99</td></tr>
+  <tr><td>What it unlocks</td><td>Unlimited saved rides (free tier: 8 saved rides)</td></tr>
+  <tr><td>Free for everyone</td><td>Recording, Live Activity / Dynamic Island, AI advice, dashboard, wear counters, sharing</td></tr>
+  <tr><td>Restore</td><td>Crown button → “Restore Purchases”. It only reports success when the App Store confirms a purchase for this Apple Account.</td></tr>
+</table>
+
+<h2>Importing old rides</h2>
+<p>You can import GPX files, a ZIP of GPX files, or a Cycling Log database export. Imported rides appear in the list, the monthly statistics and the dashboard, but do not add wear to the chain, tyre or pads.</p>
+
+<h2>FAQ</h2>
+<h3>The route has gaps</h3>
+<p>Usually precise location is off, Low Power Mode is on, or the phone was in a pocket with no sky view. Low Power Mode throttles GPS; turn it off for long rides.</p>
+<h3>Moving time is lower than elapsed time</h3>
+<p>That is expected: pauses and detected stops are excluded from moving time. Elapsed time is wall clock.</p>
+<h3>The Live Activity disappeared</h3>
+<p>iOS can end it (camera use, swiping it away, 8-hour limit). Bring the app to the foreground and it is re-created automatically.</p>
+<h3>Elevation looks too high on a flat road</h3>
+<p>Reported gain is smoothed (15-point + 5 m hysteresis) but barometric altitude is not available to every device; treat ascent as a trend, not a survey.</p>
+
+<h2>Contact</h2>
+<p>Bug reports and feature requests: <a href="mailto:vegaodm@icloud.com">vegaodm@icloud.com</a>. Please include the iOS version, the phone model, and — if it is about one ride — the ride's file name from the list.</p>
+
+<hr>
+
+<div lang="zh-Hans">
+<h1>Cycling Log — 支持</h1>
+<p class="meta">Spendly Cycling Log · 需要 iOS 27 或更高版本 · <a href="index.html">隐私政策</a></p>
+
+<h2>记录一次骑行</h2>
+<ol>
+  <li>先在开阔处打开一次 App，等 GPS 锁定（圆点变绿）。</li>
+  <li>点蓝色开始按钮。顶部会显示实时速度（公里/小时）、距离与总用时。</li>
+  <li>「暂停」停止计时与轨迹，「停止」保存这次骑行。</li>
+  <li>请保持「精确位置」开启：设置 → 隐私与安全性 → 定位服务 → Cycling Log。</li>
+</ol>
+
+<h2>采样与暂停</h2>
+<ul>
+  <li>采样是自适应的：有速度时每秒 1 次；巡航或减速时 2 秒；已判定为停止后才降到 5 秒。骑行过程中不会被抽稀。</li>
+  <li>约 20 秒以上的停顿会被自动识别并从移动时间里剔除；很短的红灯仍计入。</li>
+  <li>均速始终按移动时间计算，等红灯不会拉低均速。</li>
+</ul>
+
+<h2>仪表盘</h2>
+<ul>
+  <li><strong>本周</strong>：距离、次数、移动时长与均速，并与上周对比；上周没有骑行时只标为「基线」，不显示无意义的差值。</li>
+  <li><strong>部件里程</strong>：链条、后轮胎、刹车皮。默认周期 链条 3000 公里 / 200 小时、轮胎 3500 公里、刹车皮 1500 公里；80% 橙色、100% 红色。只统计本 App 记录的骑行，导入的 GPX 不计入。</li>
+  <li><strong>训练趋势</strong>：本月每日距离柱状 + 本月与上月均速曲线对比。</li>
+  <li><strong>恢复状态</strong>：四档（状态良好 / 正常 / 疲劳 / 过度训练）+ 今日建议 + 触发原因，依据每周 150 分钟基线、急慢性负荷比、连骑天数、周增幅与单次长距离。</li>
+</ul>
+
+<h2>分享给本地 AI</h2>
+<p>骑行详情页与月度列表都有「分享给 AI」：可直接跳转 Pocket LLM / Pocket LLMG（摘要已填入提问框）、复制文本，或使用其它应用。内容是可读摘要 + 一段 JSON（schema <code>spendlycyclinglog.ride_report/v1</code>、<code>…week_report/v1</code>、<code>…month_report/v1</code>），<strong>不含坐标</strong>。</p>
+
+<h2>会员</h2>
+<p>一次性买断（非消耗型，不续订），4.99 美元，解锁不限条数的骑行记录（免费档 8 条）。记录、灵动岛、AI 建议、仪表盘、部件里程与分享全部免费。恢复购买只会由 App Store 确认后才报告成功。</p>
+
+<h2>导入历史数据</h2>
+<p>支持 GPX、GPX 压缩包（ZIP）与 Cycling Log 数据库导出文件。导入的骑行会出现在列表、月度统计与仪表盘，但不会增加链条 / 轮胎 / 刹车皮的累计里程。</p>
+
+<h2>常见问题</h2>
+<h3>轨迹有断点</h3>
+<p>多半是「精确位置」被关闭、开启了低电量模式，或手机在口袋里看不到天空。低电量模式会限制 GPS，长途请关闭。</p>
+<h3>移动时间比总用时少</h3>
+<p>属于正常：暂停与自动识别的停止都不计入移动时间，总用时是真实时长。</p>
+<h3>灵动岛 / 锁屏卡片消失了</h3>
+<p>系统可能结束了它（相机、左滑划掉、8 小时上限）。把 App 切回前台会自动重建。</p>
+<h3>平路爬升看起来偏高</h3>
+<p>爬升经过平滑处理（15 点 + 5 m 迟滞），但并非所有设备都有气压高度计；请把爬升当作趋势值而非测绘数据。</p>
+
+<h2>联系</h2>
+<p>问题反馈：<a href="mailto:vegaodm@icloud.com">vegaodm@icloud.com</a>，请附上 iOS 版本、机型，若是某一次骑行的问题请附上列表里的文件名。</p>
+</div>
+
+</body>
+</html>
