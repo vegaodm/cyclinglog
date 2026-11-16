@@ -14,12 +14,23 @@
   .meta { color: #6b7280; font-size: 14px; }
   table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 15px; }
   th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid #d1d5db; }
-  code { font-size: 14px; }
   hr { border: none; border-top: 1px solid #d1d5db; margin: 40px 0; }
+  nav.langs { display: flex; flex-wrap: wrap; gap: 10px; font-size: 14px; margin: 16px 0 0; }
+  nav.langs a { padding: 3px 9px; border: 1px solid #d1d5db; border-radius: 999px;
+                text-decoration: none; color: inherit; }
 </style>
 </head>
 <body>
 
+<nav class="langs">
+  <a href="#en">English</a>
+  <a href="#zh-hans">简体中文</a>
+  <a href="#fr">Français</a>
+  <a href="#de">Deutsch</a>
+</nav>
+
+<!-- ─────────────────────────── English ─────────────────────────── -->
+<section id="en" lang="en">
 <h1>Cycling Log — Support</h1>
 <p class="meta">Spendly Cycling Log · iOS 27 or later · <a href="index.html">Privacy policy</a></p>
 
@@ -28,7 +39,7 @@
   <li>Open the app once with a clear view of the sky so GPS can lock (the dot turns green).</li>
   <li>Tap the blue play button. The header shows live speed in km/h, distance and elapsed time.</li>
   <li>“Pause” stops the clock and the route; “Stop” saves the ride.</li>
-  <li>Keep Precise Location on. iOS → Settings → Privacy &amp; Security → Location Services → Cycling Log.</li>
+  <li>Keep Precise Location on: Settings → Privacy &amp; Security → Location Services → Cycling Log.</li>
 </ol>
 
 <h2>Sampling and pauses</h2>
@@ -68,16 +79,18 @@
 <h3>Moving time is lower than elapsed time</h3>
 <p>That is expected: pauses and detected stops are excluded from moving time. Elapsed time is wall clock.</p>
 <h3>The Live Activity disappeared</h3>
-<p>iOS can end it (camera use, swiping it away, 8-hour limit). Bring the app to the foreground and it is re-created automatically.</p>
+<p>iOS can end it (camera use, swiping it away, the 8-hour limit). Bring the app to the foreground and it is re-created automatically.</p>
 <h3>Elevation looks too high on a flat road</h3>
-<p>Reported gain is smoothed (15-point + 5 m hysteresis) but barometric altitude is not available to every device; treat ascent as a trend, not a survey.</p>
+<p>Reported gain is smoothed (15-point + 5 m hysteresis), but not every device has a barometric altimeter; treat ascent as a trend, not a survey.</p>
 
 <h2>Contact</h2>
-<p>Bug reports and feature requests: <a href="mailto:vegaodm@icloud.com">vegaodm@icloud.com</a>. Please include the iOS version, the phone model, and — if it is about one ride — the ride's file name from the list.</p>
+<p>Bug reports and feature requests: <a href="mailto:vegaodm@outlook.com">vegaodm@outlook.com</a>. Please include the iOS version, the phone model, and — if it is about one ride — the ride's file name from the list.</p>
+</section>
 
 <hr>
 
-<div lang="zh-Hans">
+<!-- ─────────────────────────── 简体中文 ─────────────────────────── -->
+<section id="zh-hans" lang="zh-Hans">
 <h1>Cycling Log — 支持</h1>
 <p class="meta">Spendly Cycling Log · 需要 iOS 27 或更高版本 · <a href="index.html">隐私政策</a></p>
 
@@ -124,8 +137,128 @@
 <p>爬升经过平滑处理（15 点 + 5 m 迟滞），但并非所有设备都有气压高度计；请把爬升当作趋势值而非测绘数据。</p>
 
 <h2>联系</h2>
-<p>问题反馈：<a href="mailto:vegaodm@icloud.com">vegaodm@icloud.com</a>，请附上 iOS 版本、机型，若是某一次骑行的问题请附上列表里的文件名。</p>
-</div>
+<p>问题反馈：<a href="mailto:vegaodm@outlook.com">vegaodm@outlook.com</a>，请附上 iOS 版本、机型，若是某一次骑行的问题请附上列表里的文件名。</p>
+</section>
+
+<hr>
+
+<!-- ─────────────────────────── Français ─────────────────────────── -->
+<section id="fr" lang="fr">
+<h1>Cycling Log — Assistance</h1>
+<p class="meta">Spendly Cycling Log · iOS 27 ou ultérieur · <a href="index.html">Politique de confidentialité</a></p>
+
+<h2>Enregistrer une sortie</h2>
+<ol>
+  <li>Ouvrez l'app une fois à ciel dégagé pour que le GPS s'accroche (le point devient vert).</li>
+  <li>Touchez le bouton bleu. L'en-tête affiche la vitesse instantanée en km/h, la distance et la durée totale.</li>
+  <li>« Pause » arrête le chrono et la trace ; « Arrêter » enregistre la sortie.</li>
+  <li>Gardez la « Position précise » activée : Réglages → Confidentialité et sécurité → Service de localisation → Cycling Log.</li>
+</ol>
+
+<h2>Échantillonnage et pauses</h2>
+<ul>
+  <li>L'enregistrement est adaptatif : 1 point par seconde en roulant, 2 s en croisière ou au ralentissement, et 5 s seulement une fois l'arrêt déjà détecté. La trace n'est jamais allégée pendant que vous roulez.</li>
+  <li>Les arrêts d'environ 20 secondes ou plus sont détectés automatiquement et retirés du temps en mouvement. Les arrêts plus courts (un feu rapide) restent comptés.</li>
+  <li>La vitesse moyenne utilise toujours le temps en mouvement : attendre à un feu ne la fait pas baisser.</li>
+</ul>
+
+<h2>Tableau de bord</h2>
+<ul>
+  <li><strong>Cette semaine</strong> — distance, sorties, temps en mouvement et vitesse moyenne, comparés à la semaine précédente. Une semaine sans sortie précédente est indiquée comme référence au lieu d'afficher un écart trompeur.</li>
+  <li><strong>Usure</strong> — chaîne, pneu arrière et plaquettes. Intervalles par défaut : chaîne 3000 km / 200 h, pneu 3500 km, plaquettes 1500 km. Orange à 80 %, rouge à 100 %. Seules les sorties enregistrées dans l'app comptent ; les fichiers GPX importés non.</li>
+  <li><strong>Tendance</strong> — distance quotidienne du mois et courbe de vitesse moyenne, comparées au mois précédent.</li>
+  <li><strong>Récupération</strong> — un niveau (prêt / normal / fatigué / surmené) avec la suggestion du jour et ses raisons, d'après la base de 150 minutes par semaine, la charge aiguë/chronique, les jours consécutifs, l'augmentation hebdomadaire et les sorties très longues.</li>
+</ul>
+
+<h2>Partager avec une IA locale</h2>
+<p>La fiche de sortie et la liste mensuelle proposent « Partager avec une IA » : ouverture directe de Pocket LLM ou Pocket LLMG avec le résumé déjà dans le champ de question, copie du texte, ou toute autre app. Le contenu est un résumé lisible suivi d'un bloc JSON (schémas <code>spendlycyclinglog.ride_report/v1</code>, <code>…week_report/v1</code>, <code>…month_report/v1</code>) et ne contient <strong>aucune coordonnée</strong>.</p>
+
+<h2>Abonnement / achat</h2>
+<table>
+  <tr><th>Élément</th><th>Détail</th></tr>
+  <tr><td>Type</td><td>Achat unique non consommable (pas d'abonnement, rien ne se renouvelle)</td></tr>
+  <tr><td>Prix</td><td>4,99 $US</td></tr>
+  <tr><td>Débloque</td><td>Nombre illimité de sorties enregistrées (gratuit : 8 sorties)</td></tr>
+  <tr><td>Gratuit pour tous</td><td>Enregistrement, Live Activity / Dynamic Island, conseils IA, tableau de bord, compteurs d'usure, partage</td></tr>
+  <tr><td>Restauration</td><td>Bouton couronne → « Restaurer les achats ». Un succès n'est annoncé que si l'App Store confirme l'achat pour ce compte Apple.</td></tr>
+</table>
+
+<h2>Importer d'anciennes sorties</h2>
+<p>Vous pouvez importer des fichiers GPX, un ZIP de GPX ou un export de base de données Cycling Log. Les sorties importées apparaissent dans la liste, les statistiques mensuelles et le tableau de bord, mais n'ajoutent pas d'usure à la chaîne, au pneu ou aux plaquettes.</p>
+
+<h2>FAQ</h2>
+<h3>La trace a des trous</h3>
+<p>En général la position précise est désactivée, le mode économie d'énergie est actif, ou le téléphone est dans une poche sans vue du ciel. Le mode économie limite le GPS : désactivez-le pour les longues sorties.</p>
+<h3>Le temps en mouvement est inférieur à la durée totale</h3>
+<p>C'est normal : les pauses et les arrêts détectés sont exclus du temps en mouvement. La durée totale est l'horloge réelle.</p>
+<h3>La Live Activity a disparu</h3>
+<p>iOS peut y mettre fin (appareil photo, balayage pour la retirer, limite de 8 heures). Ramenez l'app au premier plan : elle est recréée automatiquement.</p>
+<h3>Le dénivelé paraît élevé sur le plat</h3>
+<p>Le gain est lissé (15 points + hystérésis de 5 m), mais tous les appareils n'ont pas d'altimètre barométrique : considérez le dénivelé comme une tendance.</p>
+
+<h2>Contact</h2>
+<p>Signaler un bug ou proposer une fonction : <a href="mailto:vegaodm@outlook.com">vegaodm@outlook.com</a>. Indiquez la version d'iOS, le modèle de téléphone et, s'il s'agit d'une sortie, son nom de fichier dans la liste.</p>
+</section>
+
+<hr>
+
+<!-- ─────────────────────────── Deutsch ─────────────────────────── -->
+<section id="de" lang="de">
+<h1>Cycling Log — Support</h1>
+<p class="meta">Spendly Cycling Log · iOS 27 oder neuer · <a href="index.html">Datenschutzerklärung</a></p>
+
+<h2>Eine Fahrt aufzeichnen</h2>
+<ol>
+  <li>Öffne die App einmal bei freier Sicht zum Himmel, damit das GPS einrastet (der Punkt wird grün).</li>
+  <li>Tippe auf den blauen Startknopf. In der Kopfzeile stehen Live-Geschwindigkeit in km/h, Distanz und Gesamtzeit.</li>
+  <li>„Pause“ stoppt Uhr und Strecke, „Stopp“ speichert die Fahrt.</li>
+  <li>Lass „Genauer Standort“ aktiv: Einstellungen → Datenschutz &amp; Sicherheit → Ortungsdienste → Cycling Log.</li>
+</ol>
+
+<h2>Abtastung und Pausen</h2>
+<ul>
+  <li>Die Aufzeichnung ist adaptiv: 1 Punkt pro Sekunde bei Tempo, 2 s im Cruise- oder Bremsbereich und 5 s erst, wenn ein Halt bereits erkannt wurde. Während du fährst, wird die Strecke nie ausgedünnt.</li>
+  <li>Halte ab etwa 20 Sekunden werden automatisch erkannt und aus der Fahrzeit entfernt. Kürzere Stopps (kurze Ampel) zählen weiter.</li>
+  <li>Die Durchschnittsgeschwindigkeit nutzt immer die Fahrzeit – Warten an der Ampel senkt sie nicht.</li>
+</ul>
+
+<h2>Dashboard</h2>
+<ul>
+  <li><strong>Diese Woche</strong> — Distanz, Fahrten, Fahrzeit und Durchschnittsgeschwindigkeit im Vergleich zur Vorwoche. Ohne Fahrten in der Vorwoche wird das als Basiswert gekennzeichnet statt eine sinnlose Differenz zu zeigen.</li>
+  <li><strong>Verschleiß</strong> — Kette, Hinterreifen und Bremsbeläge. Standardintervalle: Kette 3000 km / 200 h, Reifen 3500 km, Beläge 1500 km. Orange ab 80 %, rot ab 100 %. Es zählen nur in der App aufgezeichnete Fahrten, keine importierten GPX-Dateien.</li>
+  <li><strong>Trainingstrend</strong> — Tagesdistanz des Monats mit der Geschwindigkeitskurve dieses Monats gegen den Vormonat.</li>
+  <li><strong>Erholung</strong> — ein Band (bereit / normal / müde / überlastet) mit der Empfehlung für heute und den Gründen: 150-Minuten-Basis pro Woche, akute/chronische Belastung, aufeinanderfolgende Tage, Wochenzuwachs und einzelne lange Fahrten.</li>
+</ul>
+
+<h2>Für eine lokale KI freigeben</h2>
+<p>Fahrtdetail und Monatsliste bieten „Für KI freigeben“: direkter Sprung in Pocket LLM oder Pocket LLMG mit bereits eingefügter Zusammenfassung, Text kopieren oder eine andere App. Der Inhalt ist eine lesbare Zusammenfassung plus JSON-Block (Schemata <code>spendlycyclinglog.ride_report/v1</code>, <code>…week_report/v1</code>, <code>…month_report/v1</code>) und enthält <strong>keine Koordinaten</strong>.</p>
+
+<h2>Mitgliedschaft</h2>
+<table>
+  <tr><th>Punkt</th><th>Details</th></tr>
+  <tr><td>Art</td><td>Einmalkauf, nicht verbrauchbar (kein Abo, nichts verlängert sich)</td></tr>
+  <tr><td>Preis</td><td>4,99 US$</td></tr>
+  <tr><td>Freischaltung</td><td>Unbegrenzt gespeicherte Fahrten (kostenlos: 8 Fahrten)</td></tr>
+  <tr><td>Für alle kostenlos</td><td>Aufzeichnung, Live Activity / Dynamic Island, KI-Hinweise, Dashboard, Verschleißzähler, Freigabe</td></tr>
+  <tr><td>Wiederherstellen</td><td>Kronen-Knopf → „Käufe wiederherstellen“. Erfolg wird nur gemeldet, wenn der App Store einen Kauf für dieses Apple-Konto bestätigt.</td></tr>
+</table>
+
+<h2>Alte Fahrten importieren</h2>
+<p>Du kannst GPX-Dateien, ein ZIP mit GPX-Dateien oder einen Cycling-Log-Datenbankexport importieren. Importierte Fahrten erscheinen in Liste, Monatsstatistik und Dashboard, erhöhen aber nicht den Verschleiß von Kette, Reifen oder Belägen.</p>
+
+<h2>FAQ</h2>
+<h3>Die Strecke hat Lücken</h3>
+<p>Meist ist „Genauer Standort“ aus, der Energiesparmodus aktiv oder das Telefon in einer Tasche ohne Himmelsicht. Der Energiesparmodus drosselt das GPS – für lange Fahrten ausschalten.</p>
+<h3>Die Fahrzeit ist kürzer als die Gesamtzeit</h3>
+<p>Das ist beabsichtigt: Pausen und erkannte Halte zählen nicht zur Fahrzeit. Die Gesamtzeit ist die reale Uhrzeit.</p>
+<h3>Die Live Activity ist verschwunden</h3>
+<p>iOS kann sie beenden (Kamera, Wegwischen, 8-Stunden-Grenze). App in den Vordergrund holen – sie wird automatisch neu erstellt.</p>
+<h3>Die Höhenmeter wirken im Flachland zu hoch</h3>
+<p>Der Anstieg wird geglättet (15 Punkte + 5 m Hysterese), aber nicht jedes Gerät hat einen barometrischen Höhenmesser: Betrachte die Höhenmeter als Trend.</p>
+
+<h2>Kontakt</h2>
+<p>Fehlerberichte und Wünsche: <a href="mailto:vegaodm@outlook.com">vegaodm@outlook.com</a>. Bitte iOS-Version, Gerätemodell und – bei einer bestimmten Fahrt – den Dateinamen aus der Liste angeben.</p>
+</section>
 
 </body>
 </html>

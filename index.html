@@ -12,14 +12,25 @@
   h2 { font-size: 20px; margin-top: 32px; }
   .meta { color: #6b7280; font-size: 14px; }
   hr { border: none; border-top: 1px solid #d1d5db; margin: 40px 0; }
-  code { font-size: 14px; }
   ul { padding-left: 22px; }
+  nav.langs { display: flex; flex-wrap: wrap; gap: 10px; font-size: 14px; margin: 16px 0 0; }
+  nav.langs a { padding: 3px 9px; border: 1px solid #d1d5db; border-radius: 999px;
+                text-decoration: none; color: inherit; }
 </style>
 </head>
 <body>
 
+<nav class="langs">
+  <a href="#en">English</a>
+  <a href="#zh-hans">简体中文</a>
+  <a href="#fr">Français</a>
+  <a href="#de">Deutsch</a>
+</nav>
+
+<!-- ─────────────────────────── English ─────────────────────────── -->
+<section id="en" lang="en">
 <h1>Cycling Log — Privacy Policy</h1>
-<p class="meta">Effective 2026-11-16 · Applies to the iOS app “Spendly Cycling Log” (bundle id <code>com.vega.spendlycyclinglog.app</code>)</p>
+<p class="meta">Effective 2026-11-16</p>
 
 <h2>Summary</h2>
 <p>Cycling Log is an offline-first cycling tracker. Your rides, routes and settings are stored on your iPhone. There is no account, no server and no analytics. Nothing is uploaded unless you explicitly export or share it.</p>
@@ -30,7 +41,7 @@
 
 <h2>Where data lives</h2>
 <ul>
-  <li>Ride records, track points, wear counters and settings: a SQLite database inside the app's private container on your device.</li>
+  <li>Ride records, track points, wear counters and settings: a database inside the app's private container on your device.</li>
   <li>No iCloud sync, no third-party SDKs, no advertising identifiers.</li>
   <li>Deleting the app deletes its container, including the database.</li>
 </ul>
@@ -62,13 +73,15 @@
 <p>If a future version changes what the app does with data, this page will be updated and the effective date above will change. Material changes will also be described in the App Store “What's New” text.</p>
 
 <h2>Contact</h2>
-<p>Questions about privacy: <a href="mailto:vegaodm@icloud.com">vegaodm@icloud.com</a></p>
+<p>Questions about privacy: <a href="mailto:vegaodm@outlook.com">vegaodm@outlook.com</a></p>
+</section>
 
 <hr>
 
-<div lang="zh-Hans">
+<!-- ─────────────────────────── 简体中文 ─────────────────────────── -->
+<section id="zh-hans" lang="zh-Hans">
 <h1>Cycling Log — 隐私政策</h1>
-<p class="meta">生效日期 2026-11-16 · 适用于 iOS 应用「Spendly Cycling Log」（bundle id <code>com.vega.spendlycyclinglog.app</code>）</p>
+<p class="meta">生效日期 2026-11-16</p>
 
 <h2>摘要</h2>
 <p>Cycling Log 是离线优先的骑行记录软件。骑行记录、轨迹与设置全部保存在你的 iPhone 上；没有账号、没有服务器、没有统计 SDK。除非你主动导出或分享，任何数据都不会离开设备。</p>
@@ -78,7 +91,7 @@
 
 <h2>数据存放位置</h2>
 <ul>
-  <li>骑行记录、轨迹点、部件里程与设置：App 私有容器内的 SQLite 数据库。</li>
+  <li>骑行记录、轨迹点、部件里程与设置：App 私有容器内的本地数据库。</li>
   <li>不做 iCloud 同步，不接入第三方 SDK，不读取广告标识符。</li>
   <li>删除 App 即删除其容器（含数据库）。</li>
 </ul>
@@ -96,6 +109,9 @@
 <h2>通知与实时活动</h2>
 <p>锁屏卡片与灵动岛由 iOS 使用 App 本地提供的数据渲染，不涉及任何推送服务器。</p>
 
+<h2>儿童</h2>
+<p>本 App 不面向儿童，也不收集任何个人画像。</p>
+
 <h2>你的控制权</h2>
 <ul>
   <li>可单独删除骑行记录，或对部件使用「重置累计」。</li>
@@ -103,9 +119,114 @@
   <li>删除 App 前请先导出数据库，以免丢失历史记录。</li>
 </ul>
 
+<h2>变更</h2>
+<p>如果后续版本改变了对数据的处理方式，本页会更新，生效日期也会随之变化；重要变更会同时写在 App Store 的「新增内容」里。</p>
+
 <h2>联系</h2>
-<p>隐私相关问题：<a href="mailto:vegaodm@icloud.com">vegaodm@icloud.com</a></p>
-</div>
+<p>隐私相关问题：<a href="mailto:vegaodm@outlook.com">vegaodm@outlook.com</a></p>
+</section>
+
+<hr>
+
+<!-- ─────────────────────────── Français ─────────────────────────── -->
+<section id="fr" lang="fr">
+<h1>Cycling Log — Politique de confidentialité</h1>
+<p class="meta">Entrée en vigueur : 16 novembre 2026</p>
+
+<h2>Résumé</h2>
+<p>Cycling Log est un compteur de vélo qui fonctionne hors ligne. Vos sorties, vos traces et vos réglages restent sur votre iPhone. Il n'y a ni compte, ni serveur, ni outil de mesure d'audience. Rien n'est transmis tant que vous ne lancez pas vous-même un export ou un partage.</p>
+
+<h2>Données de localisation</h2>
+<p>L'app enregistre votre position environ une fois par seconde, et uniquement pendant une sortie. La localisation sert à la trace, à la distance, à la vitesse et au profil altimétrique, ainsi qu'aux écrans Liste, Statistiques mensuelles et Tableau de bord.</p>
+<p>La localisation en arrière-plan est nécessaire pour que l'enregistrement continue lorsque l'écran est verrouillé ou qu'une autre app est au premier plan. La « Position précise » doit rester activée : sans elle, iOS ne fournit qu'une précision d'environ 5&nbsp;km, aucune trace exploitable ne peut être enregistrée, et l'app vous le signale au lieu d'enregistrer silencieusement une sortie vide.</p>
+
+<h2>Où sont stockées les données</h2>
+<ul>
+  <li>Sorties, points de trace, compteurs d'usure et réglages : une base de données dans le conteneur privé de l'app, sur votre appareil.</li>
+  <li>Aucune synchronisation iCloud, aucun SDK tiers, aucun identifiant publicitaire.</li>
+  <li>Supprimer l'app supprime son conteneur, donc la base de données.</li>
+</ul>
+
+<h2>Export et partage (uniquement à votre initiative)</h2>
+<ul>
+  <li><strong>Export GPX / ZIP / base de données</strong> : vous choisissez la destination ; les fichiers exportés contiennent les coordonnées.</li>
+  <li><strong>Partager avec une IA</strong> : vous choisissez Pocket LLM, Pocket LLMG, « Copier le texte » ou une autre app. Le contenu est un résumé lisible complété d'un bloc JSON : distance, vitesse, durée, fractionnés, dénivelé et charge d'entraînement, <strong>sans aucune coordonnée</strong>.</li>
+  <li>Si vous collez ce résumé dans un assistant en ligne, le texte quitte l'appareil et relève de la politique de ce service. Les modèles locaux comme Pocket LLM chat et Pocket LLMG s'exécutent sur l'appareil.</li>
+</ul>
+
+<h2>Achats</h2>
+<p>Cycling Log propose un achat intégré unique et non consommable (Cycling Log Member, 4,99&nbsp;$US) qui supprime la limite de 8 sorties enregistrées. Le paiement est traité par Apple ; l'app ne voit ni votre nom, ni votre moyen de paiement, ni votre compte Apple. Elle conserve seulement un indicateur local « achat vérifié » et les identifiants de transaction nécessaires à la restauration.</p>
+
+<h2>Notifications et Live Activity</h2>
+<p>La carte de l'écran verrouillé et la Dynamic Island sont affichées par iOS à partir de données fournies localement par l'app. Aucun serveur de notifications push n'intervient.</p>
+
+<h2>Enfants</h2>
+<p>L'app ne s'adresse pas aux enfants et ne constitue aucun profil personnel.</p>
+
+<h2>Vos contrôles</h2>
+<ul>
+  <li>Supprimer une sortie, ou utiliser « Réinitialiser les compteurs » pour les pièces d'usure.</li>
+  <li>Révoquer l'accès à la localisation à tout moment : Réglages → Confidentialité et sécurité → Service de localisation → Cycling Log.</li>
+  <li>Exportez la base de données avant de supprimer l'app si vous voulez conserver l'historique.</li>
+</ul>
+
+<h2>Modifications</h2>
+<p>Si une version future change le traitement des données, cette page sera mise à jour et la date d'entrée en vigueur changera. Les changements importants seront également décrits dans le texte « Nouveautés » de l'App Store.</p>
+
+<h2>Contact</h2>
+<p>Questions relatives à la confidentialité : <a href="mailto:vegaodm@outlook.com">vegaodm@outlook.com</a></p>
+</section>
+
+<hr>
+
+<!-- ─────────────────────────── Deutsch ─────────────────────────── -->
+<section id="de" lang="de">
+<h1>Cycling Log — Datenschutzerklärung</h1>
+<p class="meta">Gültig ab 16. November 2026</p>
+
+<h2>Zusammenfassung</h2>
+<p>Cycling Log ist ein Fahrradcomputer, der offline arbeitet. Deine Fahrten, Strecken und Einstellungen liegen auf deinem iPhone. Es gibt kein Konto, keinen Server und keine Analyse-Software. Nichts wird übertragen, solange du nicht selbst einen Export oder eine Freigabe startest.</p>
+
+<h2>Standortdaten</h2>
+<p>Die App speichert deine Position etwa einmal pro Sekunde – und nur während einer laufenden Fahrt. Der Standort wird für Strecke, Distanz, Geschwindigkeit und Höhenprofil sowie für die Liste, die Monatsstatistik und das Dashboard verwendet.</p>
+<p>Hintergrundstandort ist nötig, damit eine Fahrt weiterläuft, wenn das Display gesperrt ist oder eine andere App im Vordergrund ist. „Genauer Standort“ muss aktiviert bleiben: Ohne ihn liefert iOS nur etwa 5&nbsp;km Genauigkeit, es lässt sich keine brauchbare Strecke aufzeichnen, und die App weist dich darauf hin, statt stillschweigend eine leere Fahrt zu speichern.</p>
+
+<h2>Wo die Daten liegen</h2>
+<ul>
+  <li>Fahrten, Trackpunkte, Verschleißzähler und Einstellungen: eine Datenbank im privaten Container der App auf deinem Gerät.</li>
+  <li>Keine iCloud-Synchronisierung, keine SDKs von Dritten, keine Werbe-IDs.</li>
+  <li>Beim Löschen der App wird ihr Container samt Datenbank gelöscht.</li>
+</ul>
+
+<h2>Export und Freigabe (nur wenn du sie startest)</h2>
+<ul>
+  <li><strong>GPX-/ZIP-/Datenbank-Export</strong> – das Ziel wählst du; exportierte Dateien enthalten Koordinaten.</li>
+  <li><strong>Für KI freigeben</strong> – du wählst Pocket LLM, Pocket LLMG, „Text kopieren“ oder eine andere App. Der Inhalt ist eine lesbare Zusammenfassung plus ein JSON-Block: Distanz, Geschwindigkeit, Dauer, Abschnitte, Höhenmeter und Trainingsbelastung, <strong>ohne Koordinaten</strong>.</li>
+  <li>Wenn du diese Zusammenfassung in einen Online-Assistenten einfügst, verlässt der Text das Gerät und unterliegt den Bedingungen dieses Dienstes. Lokale Modelle wie Pocket LLM chat und Pocket LLMG laufen auf dem Gerät.</li>
+</ul>
+
+<h2>Käufe</h2>
+<p>Cycling Log bietet einen einmaligen, nicht verbrauchbaren In-App-Kauf (Cycling Log Member, 4,99&nbsp;US$) an, der das Limit von 8 gespeicherten Fahrten aufhebt. Die Zahlung wickelt Apple ab; die App sieht weder deinen Namen noch dein Zahlungsmittel oder dein Apple-Konto. Lokal wird nur gespeichert, ob der Kauf bestätigt wurde, plus die für die Wiederherstellung nötigen Transaktionskennungen von Apple.</p>
+
+<h2>Mitteilungen und Live Activity</h2>
+<p>Sperrbildschirm-Karte und Dynamic Island werden von iOS aus lokal bereitgestellten Daten dargestellt. Ein Push-Server ist nicht beteiligt.</p>
+
+<h2>Kinder</h2>
+<p>Die App richtet sich nicht an Kinder und erstellt kein persönliches Profil.</p>
+
+<h2>Deine Kontrolle</h2>
+<ul>
+  <li>Einzelne Fahrten löschen oder bei Verschleißteilen „Zähler zurücksetzen“ verwenden.</li>
+  <li>Standortzugriff jederzeit entziehen: Einstellungen → Datenschutz &amp; Sicherheit → Ortungsdienste → Cycling Log.</li>
+  <li>Exportiere die Datenbank vor dem Löschen der App, wenn du die Historie behalten willst.</li>
+</ul>
+
+<h2>Änderungen</h2>
+<p>Ändert eine künftige Version den Umgang mit Daten, wird diese Seite aktualisiert und das Gültigkeitsdatum angepasst. Wesentliche Änderungen werden zusätzlich im App-Store-Text „Neue Funktionen“ beschrieben.</p>
+
+<h2>Kontakt</h2>
+<p>Fragen zum Datenschutz: <a href="mailto:vegaodm@outlook.com">vegaodm@outlook.com</a></p>
+</section>
 
 </body>
 </html>
