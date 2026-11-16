@@ -18,13 +18,18 @@
   nav.langs { display: flex; flex-wrap: wrap; gap: 10px; font-size: 14px; margin: 16px 0 0; }
   nav.langs a { padding: 3px 9px; border: 1px solid #d1d5db; border-radius: 999px;
                 text-decoration: none; color: inherit; }
+  footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid #d1d5db;
+           font-size: 13px; color: #6b7280; }
+  footer p { margin: 0; }
+  footer a { color: inherit; }
+
 </style>
 </head>
 <body>
 
 <nav class="langs">
   <a href="#en">English</a>
-  <a href="#zh-hans">简体中文</a>
+  <a href="#zh-hant">繁體中文</a>
   <a href="#fr">Français</a>
   <a href="#de">Deutsch</a>
 </nav>
@@ -60,9 +65,19 @@
 <h2>Sharing with a local AI</h2>
 <p>Ride detail and the month list have “Share for AI”: it can jump straight into Pocket LLM or Pocket LLMG with the summary already in the question field, copy the text, or use any other app. The payload is a readable summary followed by a JSON block (schema <code>spendlycyclinglog.ride_report/v1</code>, <code>…week_report/v1</code>, <code>…month_report/v1</code>) and contains <strong>no coordinates</strong>.</p>
 
+<h2>Pocket LLM Chat and Pocket LLMG</h2>
+<p>Both assistants are <strong>free apps by the same developer</strong>, and both run the model <strong>on your iPhone or iPad</strong>: no account, no server, and the text never leaves the device. They are the recommended place to ask about your training.</p>
+<ul>
+  <li><a href="https://apps.apple.com/us/app/pocket-llm-chat/id6805865627">Pocket LLM Chat</a> — chat-style assistant for questions in plain language.</li>
+  <li><a href="https://apps.apple.com/us/app/pocket-llmg/id6811747722">Pocket LLMG</a> — the same idea with a lighter, faster on-device model.</li>
+</ul>
+<p><strong>How to ask about your riding:</strong> open a ride, a month, or the dashboard → “Share for AI” → pick the assistant. The summary lands in the question field; the same text is also copied to the clipboard in case an older build ignores the link. Useful prompts: “Was this week too much, and what should the next two weeks look like?” or “My speed dropped in the second half — what does that suggest?”</p>
+<p>The summary carries distance, speed, time, 5 km splits, elevation and training-load numbers, and <strong>never any coordinates</strong>.</p>
+
 <h2>Membership</h2>
 <table>
   <tr><th>Item</th><th>Detail</th></tr>
+  <tr><td>Product</td><td><strong>CyclingLog Member</strong></td></tr>
   <tr><td>Type</td><td>One-time, non-consumable purchase (no subscription, nothing renews)</td></tr>
   <tr><td>Price</td><td>US$4.99</td></tr>
   <tr><td>What it unlocks</td><td>Unlimited saved rides (free tier: 8 saved rides)</td></tr>
@@ -89,55 +104,64 @@
 
 <hr>
 
-<!-- ─────────────────────────── 简体中文 ─────────────────────────── -->
-<section id="zh-hans" lang="zh-Hans">
-<h1>Cycling Log — 支持</h1>
-<p class="meta">Spendly Cycling Log · 需要 iOS 27 或更高版本 · <a href="index.html">隐私政策</a></p>
+<!-- ─────────────────────────── 繁體中文 ─────────────────────────── -->
+<section id="zh-hant" lang="zh-Hant">
+<h1>Cycling Log — 支援</h1>
+<p class="meta">Spendly Cycling Log · 需要 iOS 27 或更高版本 · <a href="index.html">隱私政策</a></p>
 
-<h2>记录一次骑行</h2>
+<h2>記錄一次騎行</h2>
 <ol>
-  <li>先在开阔处打开一次 App，等 GPS 锁定（圆点变绿）。</li>
-  <li>点蓝色开始按钮。顶部会显示实时速度（公里/小时）、距离与总用时。</li>
-  <li>「暂停」停止计时与轨迹，「停止」保存这次骑行。</li>
-  <li>请保持「精确位置」开启：设置 → 隐私与安全性 → 定位服务 → Cycling Log。</li>
+  <li>先在開闊處開啟一次 App，等 GPS 鎖定（圓點變綠）。</li>
+  <li>點藍色開始按鈕。頂部會顯示即時速度（公里/小時）、距離與總用時。</li>
+  <li>「暫停」停止計時與軌跡，「停止」儲存這次騎行。</li>
+  <li>請保持「精確位置」開啟：設定 → 隱私權與安全性 → 定位服務 → Cycling Log。</li>
 </ol>
 
-<h2>采样与暂停</h2>
+<h2>取樣與暫停</h2>
 <ul>
-  <li>采样是自适应的：有速度时每秒 1 次；巡航或减速时 2 秒；已判定为停止后才降到 5 秒。骑行过程中不会被抽稀。</li>
-  <li>约 20 秒以上的停顿会被自动识别并从移动时间里剔除；很短的红灯仍计入。</li>
-  <li>均速始终按移动时间计算，等红灯不会拉低均速。</li>
+  <li>取樣是自適應的：有速度時每秒 1 次；巡航或減速時 2 秒；已判定為停止後才降到 5 秒。騎行過程中不會被抽稀。</li>
+  <li>約 20 秒以上的停頓會被自動識別並從移動時間裡剔除；很短的紅燈仍計入。</li>
+  <li>均速始終依移動時間計算，等紅燈不會拉低均速。</li>
 </ul>
 
-<h2>仪表盘</h2>
+<h2>儀表板</h2>
 <ul>
-  <li><strong>本周</strong>：距离、次数、移动时长与均速，并与上周对比；上周没有骑行时只标为「基线」，不显示无意义的差值。</li>
-  <li><strong>部件里程</strong>：链条、后轮胎、刹车皮。默认周期 链条 3000 公里 / 200 小时、轮胎 3500 公里、刹车皮 1500 公里；80% 橙色、100% 红色。只统计本 App 记录的骑行，导入的 GPX 不计入。</li>
-  <li><strong>训练趋势</strong>：本月每日距离柱状 + 本月与上月均速曲线对比。</li>
-  <li><strong>恢复状态</strong>：四档（状态良好 / 正常 / 疲劳 / 过度训练）+ 今日建议 + 触发原因，依据每周 150 分钟基线、急慢性负荷比、连骑天数、周增幅与单次长距离。</li>
+  <li><strong>本週</strong>：距離、次數、移動時長與均速，並與上週對比；上週沒有騎行時只標為「基準」，不顯示無意義的差值。</li>
+  <li><strong>零件里程</strong>：鏈條、後輪胎、煞車皮。預設週期 鏈條 3000 公里 / 200 小時、輪胎 3500 公里、煞車皮 1500 公里；80% 橙色、100% 紅色。只統計本 App 記錄的騎行，匯入的 GPX 不計入。</li>
+  <li><strong>訓練趨勢</strong>：本月每日距離柱狀 + 本月與上月均速曲線對比。</li>
+  <li><strong>恢復狀態</strong>：四檔（狀態良好 / 正常 / 疲勞 / 過度訓練）+ 今日建議 + 觸發原因，依據每週 150 分鐘基準、急慢性負荷比、連騎天數、週增幅與單次長距離。</li>
 </ul>
 
-<h2>分享给本地 AI</h2>
-<p>骑行详情页与月度列表都有「分享给 AI」：可直接跳转 Pocket LLM / Pocket LLMG（摘要已填入提问框）、复制文本，或使用其它应用。内容是可读摘要 + 一段 JSON（schema <code>spendlycyclinglog.ride_report/v1</code>、<code>…week_report/v1</code>、<code>…month_report/v1</code>），<strong>不含坐标</strong>。</p>
+<h2>分享給本地 AI</h2>
+<p>騎行詳情頁與月度列表都有「分享給 AI」：可直接跳轉 Pocket LLM / Pocket LLMG（摘要已填入提問框）、複製文字，或使用其它 App。內容是可讀摘要 + 一段 JSON（schema <code>spendlycyclinglog.ride_report/v1</code>、<code>…week_report/v1</code>、<code>…month_report/v1</code>），<strong>不含座標</strong>。</p>
 
-<h2>会员</h2>
-<p>一次性买断（非消耗型，不续订），4.99 美元，解锁不限条数的骑行记录（免费档 8 条）。记录、灵动岛、AI 建议、仪表盘、部件里程与分享全部免费。恢复购买只会由 App Store 确认后才报告成功。</p>
+<h2>Pocket LLM Chat 與 Pocket LLMG</h2>
+<p>這兩個助理都是<strong>同一位開發者提供的免費 App</strong>，模型<strong>完全在你的 iPhone 或 iPad 上執行</strong>：沒有帳號、沒有伺服器，文字不會離開裝置。建議用它們來諮詢你的訓練狀況。</p>
+<ul>
+  <li><a href="https://apps.apple.com/us/app/pocket-llm-chat/id6805865627">Pocket LLM Chat</a> — 對話式助理，用自然語言提問。</li>
+  <li><a href="https://apps.apple.com/us/app/pocket-llmg/id6811747722">Pocket LLMG</a> — 同樣的用法，模型更輕、回應更快。</li>
+</ul>
+<p><strong>怎麼問：</strong>打開某一次騎行、某個月或儀表板 →「分享給 AI」→ 選擇助理。摘要會直接填入提問框；同一段文字也會複製到剪貼板，避免舊版助理忽略連結。可以這樣問：「這週是不是練太多了？接下來兩週該怎麼安排？」或「後半程速度掉了，代表什麼？」</p>
+<p>摘要包含距離、速度、時間、5 公里分段、高程與訓練負荷數字，<strong>不含任何座標</strong>。</p>
 
-<h2>导入历史数据</h2>
-<p>支持 GPX、GPX 压缩包（ZIP）与 Cycling Log 数据库导出文件。导入的骑行会出现在列表、月度统计与仪表盘，但不会增加链条 / 轮胎 / 刹车皮的累计里程。</p>
+<h2>會員</h2>
+<p>一次性買斷 <strong>CyclingLog 會員</strong>（非消耗型，不續訂），4.99 美元，解鎖不限筆數的騎行記錄（免費檔 8 筆）。記錄、動態島、AI 建議、儀表板、零件里程與分享全部免費。恢復購買只會由 App Store 確認後才回報成功。</p>
 
-<h2>常见问题</h2>
-<h3>轨迹有断点</h3>
-<p>多半是「精确位置」被关闭、开启了低电量模式，或手机在口袋里看不到天空。低电量模式会限制 GPS，长途请关闭。</p>
-<h3>移动时间比总用时少</h3>
-<p>属于正常：暂停与自动识别的停止都不计入移动时间，总用时是真实时长。</p>
-<h3>灵动岛 / 锁屏卡片消失了</h3>
-<p>系统可能结束了它（相机、左滑划掉、8 小时上限）。把 App 切回前台会自动重建。</p>
-<h3>平路爬升看起来偏高</h3>
-<p>爬升经过平滑处理（15 点 + 5 m 迟滞），但并非所有设备都有气压高度计；请把爬升当作趋势值而非测绘数据。</p>
+<h2>匯入歷史資料</h2>
+<p>支援 GPX、GPX 壓縮檔（ZIP）與 Cycling Log 資料庫匯出檔。匯入的騎行會出現在列表、月度統計與儀表板，但不會增加鏈條 / 輪胎 / 煞車皮的累計里程。</p>
 
-<h2>联系</h2>
-<p>问题反馈：<a href="mailto:vegaodm@outlook.com">vegaodm@outlook.com</a>，请附上 iOS 版本、机型，若是某一次骑行的问题请附上列表里的文件名。</p>
+<h2>常見問題</h2>
+<h3>軌跡有斷點</h3>
+<p>多半是「精確位置」被關閉、開啟了低耗電模式，或手機在口袋裡看不到天空。低耗電模式會限制 GPS，長途請關閉。</p>
+<h3>移動時間比總用時少</h3>
+<p>屬於正常：暫停與自動識別的停止都不計入移動時間，總用時是真實時長。</p>
+<h3>動態島 / 鎖屏卡片消失了</h3>
+<p>系統可能結束了它（相機、左滑劃掉、8 小時上限）。把 App 切回前景會自動重建。</p>
+<h3>平路爬升看起來偏高</h3>
+<p>爬升經過平滑處理（15 點 + 5 m 遲滯），但並非所有裝置都有氣壓高度計；請把爬升當作趨勢值而非測繪資料。</p>
+
+<h2>聯絡</h2>
+<p>問題回報：<a href="mailto:vegaodm@outlook.com">vegaodm@outlook.com</a>，請附上 iOS 版本、機型，若是某一次騎行的問題請附上列表裡的檔名。</p>
 </section>
 
 <hr>
@@ -176,12 +200,22 @@
 <h2>Abonnement / achat</h2>
 <table>
   <tr><th>Élément</th><th>Détail</th></tr>
+  <tr><td>Produit</td><td><strong>CyclingLog Member</strong></td></tr>
   <tr><td>Type</td><td>Achat unique non consommable (pas d'abonnement, rien ne se renouvelle)</td></tr>
   <tr><td>Prix</td><td>4,99 $US</td></tr>
   <tr><td>Débloque</td><td>Nombre illimité de sorties enregistrées (gratuit : 8 sorties)</td></tr>
   <tr><td>Gratuit pour tous</td><td>Enregistrement, Live Activity / Dynamic Island, conseils IA, tableau de bord, compteurs d'usure, partage</td></tr>
   <tr><td>Restauration</td><td>Bouton couronne → « Restaurer les achats ». Un succès n'est annoncé que si l'App Store confirme l'achat pour ce compte Apple.</td></tr>
 </table>
+
+<h2>Pocket LLM Chat et Pocket LLMG</h2>
+<p>Ces deux assistants sont des <strong>apps gratuites du même développeur</strong> et font tourner le modèle <strong>sur votre iPhone ou iPad</strong> : aucun compte, aucun serveur, le texte ne quitte pas l'appareil. C'est l'endroit recommandé pour poser des questions sur votre entraînement.</p>
+<ul>
+  <li><a href="https://apps.apple.com/us/app/pocket-llm-chat/id6805865627">Pocket LLM Chat</a> — assistant conversationnel, questions en langage naturel.</li>
+  <li><a href="https://apps.apple.com/us/app/pocket-llmg/id6811747722">Pocket LLMG</a> — même principe avec un modèle local plus léger et plus rapide.</li>
+</ul>
+<p><strong>Comment interroger votre pratique :</strong> ouvrez une sortie, un mois ou le tableau de bord → « Partager avec une IA » → choisissez l'assistant. Le résumé arrive dans le champ de question ; le même texte est aussi copié dans le presse-papiers si une ancienne version ignore le lien. Exemples : « Cette semaine n'était-elle pas trop chargée, et comment organiser les deux suivantes ? » ou « Ma vitesse a baissé en seconde partie — qu'est-ce que cela indique ? »</p>
+<p>Le résumé contient distance, vitesse, durée, fractionnés de 5 km, dénivelé et charge d'entraînement, et <strong>jamais de coordonnées</strong>.</p>
 
 <h2>Importer d'anciennes sorties</h2>
 <p>Vous pouvez importer des fichiers GPX, un ZIP de GPX ou un export de base de données Cycling Log. Les sorties importées apparaissent dans la liste, les statistiques mensuelles et le tableau de bord, mais n'ajoutent pas d'usure à la chaîne, au pneu ou aux plaquettes.</p>
@@ -236,12 +270,22 @@
 <h2>Mitgliedschaft</h2>
 <table>
   <tr><th>Punkt</th><th>Details</th></tr>
+  <tr><td>Produkt</td><td><strong>CyclingLog Member</strong></td></tr>
   <tr><td>Art</td><td>Einmalkauf, nicht verbrauchbar (kein Abo, nichts verlängert sich)</td></tr>
   <tr><td>Preis</td><td>4,99 US$</td></tr>
   <tr><td>Freischaltung</td><td>Unbegrenzt gespeicherte Fahrten (kostenlos: 8 Fahrten)</td></tr>
   <tr><td>Für alle kostenlos</td><td>Aufzeichnung, Live Activity / Dynamic Island, KI-Hinweise, Dashboard, Verschleißzähler, Freigabe</td></tr>
   <tr><td>Wiederherstellen</td><td>Kronen-Knopf → „Käufe wiederherstellen“. Erfolg wird nur gemeldet, wenn der App Store einen Kauf für dieses Apple-Konto bestätigt.</td></tr>
 </table>
+
+<h2>Pocket LLM Chat und Pocket LLMG</h2>
+<p>Beide Assistenten sind <strong>kostenlose Apps desselben Entwicklers</strong> und rechnen <strong>auf deinem iPhone oder iPad</strong>: kein Konto, kein Server, der Text verlässt das Gerät nicht. Genau hier fragst du am besten nach deinem Training.</p>
+<ul>
+  <li><a href="https://apps.apple.com/us/app/pocket-llm-chat/id6805865627">Pocket LLM Chat</a> — Chat-Assistent für Fragen in normaler Sprache.</li>
+  <li><a href="https://apps.apple.com/us/app/pocket-llmg/id6811747722">Pocket LLMG</a> — dasselbe Prinzip mit einem leichteren, schnelleren lokalen Modell.</li>
+</ul>
+<p><strong>So fragst du nach deiner Fahrt:</strong> Fahrt, Monat oder Dashboard öffnen → „Für KI freigeben“ → Assistent wählen. Die Zusammenfassung steht direkt im Fragefeld; derselbe Text landet zusätzlich in der Zwischenablage, falls eine ältere Version den Link ignoriert. Gute Fragen: „War diese Woche zu viel, und wie sollten die nächsten zwei Wochen aussehen?“ oder „Meine Geschwindigkeit ist in der zweiten Hälfte eingebrochen – was heißt das?“</p>
+<p>Die Zusammenfassung enthält Distanz, Geschwindigkeit, Dauer, 5-km-Abschnitte, Höhenmeter und Trainingsbelastung – und <strong>nie Koordinaten</strong>.</p>
 
 <h2>Alte Fahrten importieren</h2>
 <p>Du kannst GPX-Dateien, ein ZIP mit GPX-Dateien oder einen Cycling-Log-Datenbankexport importieren. Importierte Fahrten erscheinen in Liste, Monatsstatistik und Dashboard, erhöhen aber nicht den Verschleiß von Kette, Reifen oder Belägen.</p>
@@ -259,6 +303,10 @@
 <h2>Kontakt</h2>
 <p>Fehlerberichte und Wünsche: <a href="mailto:vegaodm@outlook.com">vegaodm@outlook.com</a>. Bitte iOS-Version, Gerätemodell und – bei einer bestimmten Fahrt – den Dateinamen aus der Liste angeben.</p>
 </section>
+
+<footer>
+  <p>© 2026 SPENDLY · <a href="index.html">Privacy</a> · <a href="support.html">Support</a></p>
+</footer>
 
 </body>
 </html>

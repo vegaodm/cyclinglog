@@ -16,13 +16,18 @@
   nav.langs { display: flex; flex-wrap: wrap; gap: 10px; font-size: 14px; margin: 16px 0 0; }
   nav.langs a { padding: 3px 9px; border: 1px solid #d1d5db; border-radius: 999px;
                 text-decoration: none; color: inherit; }
+  footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid #d1d5db;
+           font-size: 13px; color: #6b7280; }
+  footer p { margin: 0; }
+  footer a { color: inherit; }
+
 </style>
 </head>
 <body>
 
 <nav class="langs">
   <a href="#en">English</a>
-  <a href="#zh-hans">简体中文</a>
+  <a href="#zh-hant">繁體中文</a>
   <a href="#fr">Français</a>
   <a href="#de">Deutsch</a>
 </nav>
@@ -51,10 +56,11 @@
   <li><strong>GPX / ZIP / database export</strong> — you choose the destination; exported files contain coordinates.</li>
   <li><strong>Share for AI</strong> — you pick Pocket LLM, Pocket LLMG, “Copy Text” or another app. The summary is a compact text description plus a JSON block. It contains distance, speed, duration, splits, elevation and training-load numbers, and <strong>no coordinates</strong>.</li>
   <li>If you paste that summary into an online assistant, the text leaves your device and is handled under that service's policy. Local models such as Pocket LLM chat and Pocket LLMG run on the device.</li>
+  <li><strong>Pocket LLM Chat / Pocket LLMG</strong> — free local assistants by the same developer; both run on your device. <a href="https://apps.apple.com/us/app/pocket-llm-chat/id6805865627">Pocket LLM Chat</a> · <a href="https://apps.apple.com/us/app/pocket-llmg/id6811747722">Pocket LLMG</a>.</li>
 </ul>
 
 <h2>Purchases</h2>
-<p>Cycling Log offers one non-consumable in-app purchase (Cycling Log Member, US$4.99) that removes the 8-ride free limit. Payment is handled by Apple; the app never sees your name, card or Apple Account. The app only stores a local flag saying whether the purchase was verified, together with Apple's transaction identifiers needed to restore it.</p>
+<p>Cycling Log offers one non-consumable in-app purchase (CyclingLog Member, US$4.99) that removes the 8-ride free limit. Payment is handled by Apple; the app never sees your name, card or Apple Account. The app only stores a local flag saying whether the purchase was verified, together with Apple's transaction identifiers needed to restore it.</p>
 
 <h2>Notifications and Live Activity</h2>
 <p>The Lock Screen card and the Dynamic Island are rendered by iOS from data the app supplies locally. No push notification server is involved.</p>
@@ -78,52 +84,53 @@
 
 <hr>
 
-<!-- ─────────────────────────── 简体中文 ─────────────────────────── -->
-<section id="zh-hans" lang="zh-Hans">
-<h1>Cycling Log — 隐私政策</h1>
+<!-- ─────────────────────────── 繁體中文 ─────────────────────────── -->
+<section id="zh-hant" lang="zh-Hant">
+<h1>Cycling Log — 隱私政策</h1>
 <p class="meta">生效日期 2026-11-16</p>
 
 <h2>摘要</h2>
-<p>Cycling Log 是离线优先的骑行记录软件。骑行记录、轨迹与设置全部保存在你的 iPhone 上；没有账号、没有服务器、没有统计 SDK。除非你主动导出或分享，任何数据都不会离开设备。</p>
+<p>Cycling Log 是離線優先的騎行記錄軟體。騎行記錄、軌跡與設定全部保存在你的 iPhone 上；沒有帳號、沒有伺服器、沒有統計 SDK。除非你主動匯出或分享，任何資料都不會離開裝置。</p>
 
-<h2>定位数据</h2>
-<p>仅在骑行进行中约每秒记录一次位置。定位用于轨迹、距离、速度、高程，以及列表、月度统计与仪表盘。锁屏或切到其它 App 时需要后台定位，否则记录会中断。必须保持「精确位置」开启：关闭时 iOS 只能给到约 5 公里精度，无法记录轨迹，App 会明确提示而不是悄悄保存一条空记录。</p>
+<h2>定位資料</h2>
+<p>僅在騎行進行中約每秒記錄一次位置。定位用於軌跡、距離、速度、高程，以及列表、月度統計與儀表板。鎖屏或切到其它 App 時需要背景定位，否則記錄會中斷。必須保持「精確位置」開啟：關閉時 iOS 只能給到約 5 公里精度，無法記錄軌跡，App 會明確提示而不是悄悄儲存一筆空記錄。</p>
 
-<h2>数据存放位置</h2>
+<h2>資料存放位置</h2>
 <ul>
-  <li>骑行记录、轨迹点、部件里程与设置：App 私有容器内的本地数据库。</li>
-  <li>不做 iCloud 同步，不接入第三方 SDK，不读取广告标识符。</li>
-  <li>删除 App 即删除其容器（含数据库）。</li>
+  <li>騎行記錄、軌跡點、零件里程與設定：App 私有容器內的本地資料庫。</li>
+  <li>不做 iCloud 同步，不接入第三方 SDK，不讀取廣告識別碼。</li>
+  <li>刪除 App 即刪除其容器（含資料庫）。</li>
 </ul>
 
-<h2>导出与分享（只有你主动发起时）</h2>
+<h2>匯出與分享（只有你主動發起時）</h2>
 <ul>
-  <li><strong>GPX / ZIP / 数据库导出</strong>：目标位置由你选择，导出的文件包含坐标。</li>
-  <li><strong>分享给 AI</strong>：可跳转 Pocket LLM、Pocket LLMG、复制文本或其它应用。内容是紧凑的可读摘要 + 一段 JSON，包含距离、速度、时长、分段、高程与训练负荷数字，<strong>不含坐标</strong>。</li>
-  <li>如果把摘要粘贴到在线助手，文本会离开设备并受该服务条款约束；Pocket LLM chat、Pocket LLMG 等本地模型在设备上运行。</li>
+  <li><strong>GPX / ZIP / 資料庫匯出</strong>：目標位置由你選擇，匯出的檔案包含座標。</li>
+  <li><strong>分享給 AI</strong>：可跳轉 Pocket LLM、Pocket LLMG、複製文字或其它 App。內容是緊湊的可讀摘要 + 一段 JSON，包含距離、速度、時長、分段、高程與訓練負荷數字，<strong>不含座標</strong>。</li>
+  <li>如果把摘要貼到線上助理，文字會離開裝置並受該服務條款約束；Pocket LLM chat、Pocket LLMG 等本地模型在裝置上執行。</li>
+  <li><strong>Pocket LLM Chat / Pocket LLMG</strong>：同一位開發者提供的免費本地助理，模型在你的裝置上執行。<a href="https://apps.apple.com/us/app/pocket-llm-chat/id6805865627">Pocket LLM Chat</a> · <a href="https://apps.apple.com/us/app/pocket-llmg/id6811747722">Pocket LLMG</a>。</li>
 </ul>
 
-<h2>内购</h2>
-<p>App 提供一个非消耗型内购（Cycling Log Member，4.99 美元），用于解除 8 条骑行记录的免费上限。支付由 Apple 处理，App 看不到你的姓名、银行卡或 Apple 账号；本地只保存「是否验证通过」的标记与恢复购买所需的交易标识。</p>
+<h2>內購</h2>
+<p>App 提供一個非消耗型內購（CyclingLog Member，4.99 美元），用於解除 8 筆騎行記錄的免費上限。付款由 Apple 處理，App 看不到你的姓名、信用卡或 Apple 帳號；本地只保存「是否驗證通過」的標記與恢復購買所需的交易識別碼。</p>
 
-<h2>通知与实时活动</h2>
-<p>锁屏卡片与灵动岛由 iOS 使用 App 本地提供的数据渲染，不涉及任何推送服务器。</p>
+<h2>通知與即時動態</h2>
+<p>鎖屏卡片與動態島由 iOS 使用 App 本地提供的資料渲染，不涉及任何推播伺服器。</p>
 
-<h2>儿童</h2>
-<p>本 App 不面向儿童，也不收集任何个人画像。</p>
+<h2>兒童</h2>
+<p>本 App 不面向兒童，也不收集任何個人輪廓。</p>
 
-<h2>你的控制权</h2>
+<h2>你的控制權</h2>
 <ul>
-  <li>可单独删除骑行记录，或对部件使用「重置累计」。</li>
-  <li>随时可在 设置 → 隐私与安全性 → 定位服务 → Cycling Log 撤销定位权限。</li>
-  <li>删除 App 前请先导出数据库，以免丢失历史记录。</li>
+  <li>可單獨刪除騎行記錄，或對零件使用「重置累計」。</li>
+  <li>隨時可在 設定 → 隱私權與安全性 → 定位服務 → Cycling Log 撤銷定位權限。</li>
+  <li>刪除 App 前請先匯出資料庫，以免遺失歷史記錄。</li>
 </ul>
 
-<h2>变更</h2>
-<p>如果后续版本改变了对数据的处理方式，本页会更新，生效日期也会随之变化；重要变更会同时写在 App Store 的「新增内容」里。</p>
+<h2>變更</h2>
+<p>如果後續版本改變了對資料的處理方式，本頁會更新，生效日期也會隨之變化；重要變更會同時寫在 App Store 的「新版內容」裡。</p>
 
-<h2>联系</h2>
-<p>隐私相关问题：<a href="mailto:vegaodm@outlook.com">vegaodm@outlook.com</a></p>
+<h2>聯絡</h2>
+<p>隱私相關問題：<a href="mailto:vegaodm@outlook.com">vegaodm@outlook.com</a></p>
 </section>
 
 <hr>
@@ -152,10 +159,11 @@
   <li><strong>Export GPX / ZIP / base de données</strong> : vous choisissez la destination ; les fichiers exportés contiennent les coordonnées.</li>
   <li><strong>Partager avec une IA</strong> : vous choisissez Pocket LLM, Pocket LLMG, « Copier le texte » ou une autre app. Le contenu est un résumé lisible complété d'un bloc JSON : distance, vitesse, durée, fractionnés, dénivelé et charge d'entraînement, <strong>sans aucune coordonnée</strong>.</li>
   <li>Si vous collez ce résumé dans un assistant en ligne, le texte quitte l'appareil et relève de la politique de ce service. Les modèles locaux comme Pocket LLM chat et Pocket LLMG s'exécutent sur l'appareil.</li>
+  <li><strong>Pocket LLM Chat / Pocket LLMG</strong> — assistants locaux gratuits du même développeur, exécutés sur votre appareil. <a href="https://apps.apple.com/us/app/pocket-llm-chat/id6805865627">Pocket LLM Chat</a> · <a href="https://apps.apple.com/us/app/pocket-llmg/id6811747722">Pocket LLMG</a>.</li>
 </ul>
 
 <h2>Achats</h2>
-<p>Cycling Log propose un achat intégré unique et non consommable (Cycling Log Member, 4,99&nbsp;$US) qui supprime la limite de 8 sorties enregistrées. Le paiement est traité par Apple ; l'app ne voit ni votre nom, ni votre moyen de paiement, ni votre compte Apple. Elle conserve seulement un indicateur local « achat vérifié » et les identifiants de transaction nécessaires à la restauration.</p>
+<p>Cycling Log propose un achat intégré unique et non consommable (CyclingLog Member, 4,99&nbsp;$US) qui supprime la limite de 8 sorties enregistrées. Le paiement est traité par Apple ; l'app ne voit ni votre nom, ni votre moyen de paiement, ni votre compte Apple. Elle conserve seulement un indicateur local « achat vérifié » et les identifiants de transaction nécessaires à la restauration.</p>
 
 <h2>Notifications et Live Activity</h2>
 <p>La carte de l'écran verrouillé et la Dynamic Island sont affichées par iOS à partir de données fournies localement par l'app. Aucun serveur de notifications push n'intervient.</p>
@@ -203,10 +211,11 @@
   <li><strong>GPX-/ZIP-/Datenbank-Export</strong> – das Ziel wählst du; exportierte Dateien enthalten Koordinaten.</li>
   <li><strong>Für KI freigeben</strong> – du wählst Pocket LLM, Pocket LLMG, „Text kopieren“ oder eine andere App. Der Inhalt ist eine lesbare Zusammenfassung plus ein JSON-Block: Distanz, Geschwindigkeit, Dauer, Abschnitte, Höhenmeter und Trainingsbelastung, <strong>ohne Koordinaten</strong>.</li>
   <li>Wenn du diese Zusammenfassung in einen Online-Assistenten einfügst, verlässt der Text das Gerät und unterliegt den Bedingungen dieses Dienstes. Lokale Modelle wie Pocket LLM chat und Pocket LLMG laufen auf dem Gerät.</li>
+  <li><strong>Pocket LLM Chat / Pocket LLMG</strong> — kostenlose lokale Assistenten desselben Entwicklers, die auf deinem Gerät laufen. <a href="https://apps.apple.com/us/app/pocket-llm-chat/id6805865627">Pocket LLM Chat</a> · <a href="https://apps.apple.com/us/app/pocket-llmg/id6811747722">Pocket LLMG</a>.</li>
 </ul>
 
 <h2>Käufe</h2>
-<p>Cycling Log bietet einen einmaligen, nicht verbrauchbaren In-App-Kauf (Cycling Log Member, 4,99&nbsp;US$) an, der das Limit von 8 gespeicherten Fahrten aufhebt. Die Zahlung wickelt Apple ab; die App sieht weder deinen Namen noch dein Zahlungsmittel oder dein Apple-Konto. Lokal wird nur gespeichert, ob der Kauf bestätigt wurde, plus die für die Wiederherstellung nötigen Transaktionskennungen von Apple.</p>
+<p>Cycling Log bietet einen einmaligen, nicht verbrauchbaren In-App-Kauf (CyclingLog Member, 4,99&nbsp;US$) an, der das Limit von 8 gespeicherten Fahrten aufhebt. Die Zahlung wickelt Apple ab; die App sieht weder deinen Namen noch dein Zahlungsmittel oder dein Apple-Konto. Lokal wird nur gespeichert, ob der Kauf bestätigt wurde, plus die für die Wiederherstellung nötigen Transaktionskennungen von Apple.</p>
 
 <h2>Mitteilungen und Live Activity</h2>
 <p>Sperrbildschirm-Karte und Dynamic Island werden von iOS aus lokal bereitgestellten Daten dargestellt. Ein Push-Server ist nicht beteiligt.</p>
@@ -227,6 +236,10 @@
 <h2>Kontakt</h2>
 <p>Fragen zum Datenschutz: <a href="mailto:vegaodm@outlook.com">vegaodm@outlook.com</a></p>
 </section>
+
+<footer>
+  <p>© 2026 SPENDLY · <a href="index.html">Privacy</a> · <a href="support.html">Support</a></p>
+</footer>
 
 </body>
 </html>
