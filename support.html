@@ -87,6 +87,7 @@
 
 <h2>Importing old rides</h2>
 <p>You can import GPX files, a ZIP of GPX files, or a Cycling Log database export. Imported rides appear in the list, the monthly statistics and the dashboard, but do not add wear to the chain, tyre or pads.</p>
+<p>Imports are checked before anything is replaced: a database import keeps your current data until the new file passes validation, and a ride whose points cannot all be stored is rejected rather than saved with gaps. Limits: 256 MB per GPX file, 512 MB per ZIP archive or database import.</p>
 
 <h2>FAQ</h2>
 <h3>The route has gaps</h3>
@@ -97,6 +98,10 @@
 <p>iOS can end it (camera use, swiping it away, the 8-hour limit). Bring the app to the foreground and it is re-created automatically.</p>
 <h3>Elevation looks too high on a flat road</h3>
 <p>Reported gain is smoothed (15-point + 5 m hysteresis), but not every device has a barometric altimeter; treat ascent as a trend, not a survey.</p>
+<h3>Are my rides backed up to iCloud?</h3>
+<p>No — the ride database is deliberately excluded from iCloud and iTunes backup, so coordinates never leave the phone that way. <strong>Use Export</strong> to keep a copy: the exported database can be imported again on this or another device. Device restore from a backup will not bring the rides back.</p>
+<h3>Pocket LLM opens with an empty question</h3>
+<p>The summary is always copied to the clipboard, so paste it into the question field. Very long summaries (a busy month) are copied only instead of being sent as a link, because iOS silently drops very long custom-scheme URLs.</p>
 
 <h2>Contact</h2>
 <p>Bug reports and feature requests: <a href="mailto:vegaodm@outlook.com">vegaodm@outlook.com</a>. Please include the iOS version, the phone model, and — if it is about one ride — the ride's file name from the list.</p>
@@ -149,6 +154,7 @@
 
 <h2>匯入歷史資料</h2>
 <p>支援 GPX、GPX 壓縮檔（ZIP）與 Cycling Log 資料庫匯出檔。匯入的騎行會出現在列表、月度統計與儀表板，但不會增加鏈條 / 輪胎 / 煞車皮的累計里程。</p>
+<p>匯入會先檢查再取代：資料庫匯入在你目前資料通過驗證前不會被覆蓋，而無法完整儲存軌跡點的騎行會被拒絕，不會存成有缺口的記錄。上限：單一 GPX 256 MB、ZIP 壓縮檔或資料庫匯入 512 MB。</p>
 
 <h2>常見問題</h2>
 <h3>軌跡有斷點</h3>
@@ -159,6 +165,10 @@
 <p>系統可能結束了它（相機、左滑劃掉、8 小時上限）。把 App 切回前景會自動重建。</p>
 <h3>平路爬升看起來偏高</h3>
 <p>爬升經過平滑處理（15 點 + 5 m 遲滯），但並非所有裝置都有氣壓高度計；請把爬升當作趨勢值而非測繪資料。</p>
+<h3>騎行資料會備份到 iCloud 嗎？</h3>
+<p>不會——騎行資料庫刻意排除在 iCloud 與 iTunes 備份之外，座標不會透過備份離開手機。<strong>請使用「匯出」</strong>保存副本：匯出的資料庫可以重新匯入本機或另一台裝置。用系統備份還原裝置不會帶回這些騎行。</p>
+<h3>Pocket LLM 打開後提問框是空的</h3>
+<p>摘要一定會複製到剪貼板，直接貼進提問框即可。非常長的摘要（例如很忙的一個月）只會複製而不會用連結送出，因為 iOS 會靜默丟棄過長的自訂 scheme URL。</p>
 
 <h2>聯絡</h2>
 <p>問題回報：<a href="mailto:vegaodm@outlook.com">vegaodm@outlook.com</a>，請附上 iOS 版本、機型，若是某一次騎行的問題請附上列表裡的檔名。</p>
@@ -219,6 +229,7 @@
 
 <h2>Importer d'anciennes sorties</h2>
 <p>Vous pouvez importer des fichiers GPX, un ZIP de GPX ou un export de base de données Cycling Log. Les sorties importées apparaissent dans la liste, les statistiques mensuelles et le tableau de bord, mais n'ajoutent pas d'usure à la chaîne, au pneu ou aux plaquettes.</p>
+<p>Un import est vérifié avant tout remplacement : vos données actuelles sont conservées jusqu'à validation du nouveau fichier, et une sortie dont les points ne peuvent pas tous être enregistrés est refusée plutôt que sauvegardée avec des trous. Limites : 256 Mo par fichier GPX, 512 Mo par archive ZIP ou import de base.</p>
 
 <h2>FAQ</h2>
 <h3>La trace a des trous</h3>
@@ -229,6 +240,10 @@
 <p>iOS peut y mettre fin (appareil photo, balayage pour la retirer, limite de 8 heures). Ramenez l'app au premier plan : elle est recréée automatiquement.</p>
 <h3>Le dénivelé paraît élevé sur le plat</h3>
 <p>Le gain est lissé (15 points + hystérésis de 5 m), mais tous les appareils n'ont pas d'altimètre barométrique : considérez le dénivelé comme une tendance.</p>
+<h3>Mes sorties sont-elles sauvegardées dans iCloud ?</h3>
+<p>Non — la base de données est volontairement exclue des sauvegardes iCloud et iTunes, afin que les coordonnées ne quittent pas le téléphone par ce biais. <strong>Utilisez « Exporter »</strong> pour garder une copie : la base exportée peut être réimportée sur cet appareil ou un autre. Une restauration système ne ramènera pas les sorties.</p>
+<h3>Pocket LLM s'ouvre avec un champ de question vide</h3>
+<p>Le résumé est toujours copié dans le presse-papiers : collez-le dans le champ. Les résumés très longs (un mois chargé) sont seulement copiés au lieu d'être envoyés par lien, car iOS ignore silencieusement les URL de schéma personnalisé trop longues.</p>
 
 <h2>Contact</h2>
 <p>Signaler un bug ou proposer une fonction : <a href="mailto:vegaodm@outlook.com">vegaodm@outlook.com</a>. Indiquez la version d'iOS, le modèle de téléphone et, s'il s'agit d'une sortie, son nom de fichier dans la liste.</p>
@@ -289,6 +304,7 @@
 
 <h2>Alte Fahrten importieren</h2>
 <p>Du kannst GPX-Dateien, ein ZIP mit GPX-Dateien oder einen Cycling-Log-Datenbankexport importieren. Importierte Fahrten erscheinen in Liste, Monatsstatistik und Dashboard, erhöhen aber nicht den Verschleiß von Kette, Reifen oder Belägen.</p>
+<p>Ein Import wird geprüft, bevor etwas ersetzt wird: Beim Datenbank-Import bleiben deine aktuellen Daten erhalten, bis die neue Datei validiert ist, und eine Fahrt, deren Punkte nicht vollständig gespeichert werden können, wird abgelehnt statt mit Lücken gesichert. Grenzen: 256 MB pro GPX-Datei, 512 MB pro ZIP-Archiv oder Datenbank-Import.</p>
 
 <h2>FAQ</h2>
 <h3>Die Strecke hat Lücken</h3>
@@ -299,6 +315,10 @@
 <p>iOS kann sie beenden (Kamera, Wegwischen, 8-Stunden-Grenze). App in den Vordergrund holen – sie wird automatisch neu erstellt.</p>
 <h3>Die Höhenmeter wirken im Flachland zu hoch</h3>
 <p>Der Anstieg wird geglättet (15 Punkte + 5 m Hysterese), aber nicht jedes Gerät hat einen barometrischen Höhenmesser: Betrachte die Höhenmeter als Trend.</p>
+<h3>Werden meine Fahrten in iCloud gesichert?</h3>
+<p>Nein – die Fahrdatenbank ist bewusst von iCloud- und iTunes-Backups ausgeschlossen, damit Koordinaten das Telefon auf diesem Weg nicht verlassen. <strong>Nutze den Export</strong> für eine Kopie: Die exportierte Datenbank lässt sich auf diesem oder einem anderen Gerät wieder importieren. Eine Systemwiederherstellung bringt die Fahrten nicht zurück.</p>
+<h3>Pocket LLM öffnet mit leerem Fragefeld</h3>
+<p>Die Zusammenfassung landet immer in der Zwischenablage – einfach einfügen. Sehr lange Zusammenfassungen (ein voller Monat) werden nur kopiert statt als Link gesendet, weil iOS überlange URLs eigener Schemata still verwirft.</p>
 
 <h2>Kontakt</h2>
 <p>Fehlerberichte und Wünsche: <a href="mailto:vegaodm@outlook.com">vegaodm@outlook.com</a>. Bitte iOS-Version, Gerätemodell und – bei einer bestimmten Fahrt – den Dateinamen aus der Liste angeben.</p>
